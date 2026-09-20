@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilustre Municipalidad de Molina - Sitio Oficial</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <a href="tel:1462" class="pestaña-seguridad" title="Emergencias Seguridad Pública 1462">
+        <i class="fas fa-shield-alt me-1"></i> SEGURIDAD PUBLICA 1462
+    </a>
+
+    <header class="header-superior py-2 text-white">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <div class="enlaces-topbar d-flex flex-wrap gap-3">
+                <a href="#transparencia"><i class="fas fa-info-circle text-warning me-1"></i> Solicitar Información (Ley
+                    20.285)</a>
+                <a href="#transparencia"><i class="fas fa-file-alt text-warning me-1"></i> Transparencia Activa</a>
+                <a href="https://www.leylobby.gob.cl" target="_blank" rel="noopener"><i
+                        class="fas fa-gavel text-warning me-1"></i> Ley del Lobby</a>
+                <a href="#transparencia"><i class="fas fa-chart-bar text-warning me-1"></i> Datos Abiertos</a>
+                <a href="#intranet"><i class="fas fa-user-lock text-warning me-1"></i> Intranet Municipal</a>
+            </div>
+            <div class="transmision-concejo mt-1 mt-md-0">
+                <span class="badge bg-danger me-1">EN VIVO</span>
+                <a href="#concejo" class="fw-bold text-white text-decoration-none">Concejo Municipal Online</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="barra-datos py-2 border-bottom">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center fs-7 text-dark fw-semibold">
+            <div id="info-clima" class="d-flex align-items-center">
+                <i class="fas fa-sun text-warning me-2 fa-lg"></i> <span>Cargando clima de Molina...</span>
+            </div>
+            <div id="info-indicadores" class="d-flex gap-3 flex-wrap">
+                <i class="fas fa-spinner fa-spin text-primary me-1"></i> Cargando indicadores...
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top py-2" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo-box bg-primary text-white rounded-3 p-2 me-2 shadow-sm">
+                    <i class="fas fa-landmark fa-xl"></i>
+                </div>
+                <div>
+                    <span class="d-block fw-bold text-dark lh-1 fs-5">MUNICIPALIDAD DE MOLINA</span>
+                    <small class="text-primary fw-bold fs-8">ILUSTRE MUNICIPALIDAD</small>
+                </div>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false"
+                aria-label="Ver menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold fs-7 text-uppercase gap-lg-1">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropDeptos" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Departamentos
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-lg rounded-3 p-2" aria-labelledby="dropDeptos">
+                            <li><a class="dropdown-item rounded-2 py-2" href="#deptos"><i
+                                        class="fas fa-building text-primary me-2"></i>Administración Municipal</a></li>
+                            <li><a class="dropdown-item rounded-2 py-2" href="#deptos"><i
+                                        class="fas fa-gavel text-primary me-2"></i>Juzgado de Policía Local</a></li>
+                            <li><a class="dropdown-item rounded-2 py-2" href="#deptos"><i
+                                        class="fas fa-users text-primary me-2"></i>DIDECO (Desarrollo Comunitario)</a>
+                            </li>
+                            <li><a class="dropdown-item rounded-2 py-2" href="#deptos"><i
+                                        class="fas fa-car text-primary me-2"></i>Dirección de Tránsito</a></li>
+                            <li><a class="dropdown-item rounded-2 py-2" href="#deptos"><i
+                                        class="fas fa-hard-hat text-primary me-2"></i>Obras Municipales (DOM)</a></li>
+                            <li><a class="dropdown-item rounded-2 py-2" href="#deptos"><i
+                                        class="fas fa-shield-alt text-primary me-2"></i>Seguridad Pública</a></li>
+                            <li><a class="dropdown-item rounded-2 py-2" href="#deptos"><i
+                                        class="fas fa-heartbeat text-primary me-2"></i>Salud (DESAMU)</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropMunicipio" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Municipio
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-lg rounded-3 p-2" aria-labelledby="dropMunicipio">
+                            <li><a class="dropdown-item rounded-2 py-2" href="#alcaldia"><i
+                                        class="fas fa-user-tie text-primary me-2"></i>Alcalde y Concejo</a></li>
+                            <li><a class="dropdown-item rounded-2 py-2" href="#transparencia"><i
+                                        class="fas fa-sitemap text-primary me-2"></i>Organigrama</a></li>
+                            <li><a class="dropdown-item rounded-2 py-2" href="#transparencia"><i
+                                        class="fas fa-file-contract text-primary me-2"></i>Decretos y Ordenanzas</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#transparencia">Transparencia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#noticias">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formulario-contacto">Contacto</a></li>
+                </ul>
+
+                <a href="#tramites"
+                    class="btn btn-danger rounded-pill ms-lg-3 px-4 py-2 fw-bold text-uppercase shadow-sm">
+                    <i class="fas fa-desktop me-1"></i> Trámites Digitales
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero-seccion">
+        <div id="carruselInicio" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active slide-1 text-white py-5">
+                    <div class="container py-5">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8 text-center text-lg-start">
+                                <span class="badge bg-warning text-dark mb-3 px-3 py-2 fw-bold text-uppercase fs-7">
+                                    Portal Municipal Molina
+                                </span>
+                                <h1 class="display-4 fw-bold mb-3 text-shadow">Bienvenidos a la Ilustre Municipalidad de
+                                    Molina</h1>
+                                <p class="lead mb-4 text-light text-shadow">Sitio web renovado para facilitar el acceso
+                                    a trámites, beneficios sociales e información de nuestra comuna.</p>
+                                <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap">
+                                    <a href="#tramites"
+                                        class="btn btn-primary btn-lg rounded-pill px-4 shadow fw-bold"><i
+                                            class="fas fa-laptop me-2"></i>Ver Trámites Digitales</a>
+                                    <a href="#formulario-contacto"
+                                        class="btn btn-light btn-lg rounded-pill px-4 shadow text-dark fw-bold"><i
+                                            class="fas fa-comments me-2"></i>Atención al Vecino</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item slide-2 text-white py-5">
+                    <div class="container py-5">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8 text-center text-lg-start">
+                                <span class="badge bg-success mb-3 px-3 py-2 fw-bold text-uppercase fs-7">
+                                    Programas Sociales DIDECO
+                                </span>
+                                <h2 class="display-4 fw-bold mb-3 text-shadow">Guía de Beneficios Sociales y Apoyo
+                                    Familiar</h2>
+                                <p class="lead mb-4 text-light text-shadow">Conoce los subsidios de agua potable, becas
+                                    municipales y programas de asistencia para la comunidad.</p>
+                                <a href="#beneficios"
+                                    class="btn btn-warning text-dark btn-lg rounded-pill px-4 fw-bold shadow"><i
+                                        class="fas fa-gift me-2"></i>Ver Beneficios Sociales</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item slide-3 text-white py-5">
+                    <div class="container py-5">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8 text-center text-lg-start">
+                                <span class="badge bg-info text-dark mb-3 px-3 py-2 fw-bold text-uppercase fs-7">
+                                    Deportes y Recreación
+                                </span>
+                                <h2 class="display-4 fw-bold mb-3 text-shadow">Talleres Deportivos y Actividades en
+                                    Molina</h2>
+                                <p class="lead mb-4 text-light text-shadow">Participa en las actividades deportivas
+                                    gratuitas para niños, jóvenes y adultos mayores en distintos sectores.</p>
+                                <a href="#beneficios"
+                                    class="btn btn-info text-white btn-lg rounded-pill px-4 fw-bold shadow"><i
+                                        class="fas fa-volleyball-ball me-2"></i>Ver Talleres Disponibles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselInicio" data-bs-slide="prev"
+                aria-label="Anterior">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselInicio" data-bs-slide="next"
+                aria-label="Siguiente">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark">Destacados Municipales</h2>
+                <div class="separador bg-primary mx-auto"></div>
+                <p class="text-muted">Servicios e información de mayor utilidad para los vecinos de Molina y Lontué</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card tarjeta-destacada h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="img-contenedor">
+                            <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top" alt="Beneficios Sociales DIDECO">
+                            <span class="badge bg-warning text-dark etiqueta-card fw-bold">DIDECO</span>
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="h5 fw-bold text-dark mb-2">Guía de Beneficios Sociales</h3>
+                                <p class="text-muted fs-7">Revisa la lista de subsidios, aportes familiares y ayudas
+                                    sociales que entrega el municipio.</p>
+                            </div>
+                            <button class="btn btn-primary rounded-pill w-100 fw-bold btn-sm mt-3"
+                                data-bs-toggle="modal" data-bs-target="#modalBeneficios">
+                                Conocer Más <i class="fas fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card tarjeta-destacada h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="img-contenedor">
+                            <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top" alt="Servicios Municipales Molina">
+                            <span class="badge bg-primary etiqueta-card fw-bold">Servicios</span>
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="h5 fw-bold text-dark mb-2">Mapas de Servicios Municipales</h3>
+                                <p class="text-muted fs-7">Ubicación de centros de salud (CESFAM), puntos limpios,
+                                    recintos deportivos y oficinas.</p>
+                            </div>
+                            <button class="btn btn-warning text-dark rounded-pill w-100 fw-bold btn-sm mt-3"
+                                data-bs-toggle="modal" data-bs-target="#modalServicios">
+                                Infórmate Aquí <i class="fas fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card tarjeta-destacada h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="img-contenedor">
+                            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top" alt="Deportes Molina">
+                            <span class="badge bg-success etiqueta-card fw-bold">Deportes</span>
+                        </div>
+                        <div class="card-body p-4 text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="h5 fw-bold text-dark mb-2">Talleres Deportivos y Recreativos</h3>
+                                <p class="text-muted fs-7">Participa en talleres gratuitos de zumba, escuelas de fútbol
+                                    infantil y acondicionamiento físico.</p>
+                            </div>
+                            <button class="btn btn-success rounded-pill w-100 fw-bold btn-sm mt-3"
+                                data-bs-toggle="modal" data-bs-target="#modalDeportes">
+                                ¡Participa! <i class="fas fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="noticias" class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark">Noticias de Molina</h2>
+                <div class="separador bg-danger mx-auto"></div>
+                <p class="text-muted">Informaciones y novedades recientes de la comuna</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden tarjeta-noticia">
+                        <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top" alt="Noticia Parque Radal Siete Tazas"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary mb-2">Medio Ambiente</span>
+                            <h3 class="h6 fw-bold text-dark">Protección del Parque Radal Siete Tazas</h3>
+                            <p class="text-muted fs-7 mb-0">Implementación de medidas sustentables y de seguridad para
+                                resguardar la reserva natural comúnmente visitada.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 px-4 pb-3">
+                            <small class="text-muted"><i class="fas fa-calendar-alt me-1"></i> 18 Septiembre,
+                                2026</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden tarjeta-noticia">
+                        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top" alt="Operativo Mascotas Lontué"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success mb-2">Salud Mascotas</span>
+                            <h3 class="h6 fw-bold text-dark">Operativo de Microchip Gratuito en Lontué</h3>
+                            <p class="text-muted fs-7 mb-0">La unidad veterinaria del municipio realizó jornada de
+                                desparasitación y vacunación para mascotas.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 px-4 pb-3">
+                            <small class="text-muted"><i class="fas fa-calendar-alt me-1"></i> 15 Septiembre,
+                                2026</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden tarjeta-noticia">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top" alt="Obras Alumbrado" style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <span class="badge bg-warning text-dark mb-2">Obras Públicas</span>
+                            <h3 class="h6 fw-bold text-dark">Nuevas Luminarias LED en Sectores Vecinales</h3>
+                            <p class="text-muted fs-7 mb-0">Avances en el recambio de luminarias de alumbrado público
+                                para aumentar la seguridad en calles de la comuna.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 px-4 pb-3">
+                            <small class="text-muted"><i class="fas fa-calendar-alt me-1"></i> 10 Septiembre,
+                                2026</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tramites" class="py-5 bg-light">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+                <div>
+                    <h2 class="fw-bold mb-1 text-dark">Trámites Digitales</h2>
+                    <div class="separador bg-primary mb-2"></div>
+                    <p class="text-muted mb-0">Realiza tus pagos y consultas en línea de forma segura.</p>
+                </div>
+                <div class="mt-3 mt-md-0">
+                    <div class="btn-group rounded-pill p-1 bg-white shadow-sm border" role="group"
+                        aria-label="Filtro de trámites">
+                        <button type="button" class="btn btn-filtro active rounded-pill px-3 btn-sm"
+                            data-categoria="todos">Todos</button>
+                        <button type="button" class="btn btn-filtro rounded-pill px-3 btn-sm"
+                            data-categoria="pagos">Pagos</button>
+                        <button type="button" class="btn btn-filtro rounded-pill px-3 btn-sm"
+                            data-categoria="obras">Obras</button>
+                        <button type="button" class="btn btn-filtro rounded-pill px-3 btn-sm"
+                            data-categoria="comunidad">Comunidad</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3" id="grillaTramites">
+                <div class="col-sm-6 col-md-4 col-lg-3 item-tramite" data-categoria="pagos">
+                    <a href="https://ww16.e-com.cl/Pagos/PermisoCirculacion/renovacion/ecomv3/vista/?id=120"
+                        target="_blank" rel="noopener"
+                        class="card tarjeta-tramite h-100 border-0 shadow-sm rounded-4 p-4 text-center text-decoration-none">
+                        <div class="icono-tramite bg-primary text-white mx-auto mb-3 shadow-sm">
+                            <i class="fas fa-car fa-lg"></i>
+                        </div>
+                        <h4 class="h6 fw-bold text-dark mb-1">Permiso de Circulación</h4>
+                        <p class="text-muted fs-8 mb-0">Pago y renovación vehicular online.</p>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 item-tramite" data-categoria="pagos">
+                    <a href="https://ww16.e-com.cl/Pagos/PatentesComerciales/Pago%20Patentes/onlinev3/inicio.asp?codMunic=120"
+                        target="_blank" rel="noopener"
+                        class="card tarjeta-tramite h-100 border-0 shadow-sm rounded-4 p-4 text-center text-decoration-none">
+                        <div class="icono-tramite bg-warning text-dark mx-auto mb-3 shadow-sm">
+                            <i class="fas fa-file-invoice-dollar fa-lg"></i>
+                        </div>
+                        <h4 class="h6 fw-bold text-dark mb-1">Patentes Comerciales</h4>
+                        <p class="text-muted fs-8 mb-0">Pago de patentes comerciales.</p>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 item-tramite" data-categoria="pagos">
+                    <a href="https://ww16.e-com.cl/Pagos/JPL_v3/partes_online/ingresoJuzgado.asp?codMunic=120"
+                        target="_blank" rel="noopener"
+                        class="card tarjeta-tramite h-100 border-0 shadow-sm rounded-4 p-4 text-center text-decoration-none">
+                        <div class="icono-tramite bg-danger text-white mx-auto mb-3 shadow-sm">
+                            <i class="fas fa-gavel fa-lg"></i>
+                        </div>
+                        <h4 class="h6 fw-bold text-dark mb-1">Partes Empadronados</h4>
+                        <p class="text-muted fs-8 mb-0">Consulta e Infracciones JPL.</p>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 item-tramite" data-categoria="comunidad">
+                    <a href="#formulario-contacto"
+                        class="card tarjeta-tramite h-100 border-0 shadow-sm rounded-4 p-4 text-center text-decoration-none">
+                        <div class="icono-tramite bg-success text-white mx-auto mb-3 shadow-sm">
+                            <i class="fas fa-paw fa-lg"></i>
+                        </div>
+                        <h4 class="h6 fw-bold text-dark mb-1">Adopción de Mascotas</h4>
+                        <p class="text-muted fs-8 mb-0">Portal de adopción canina.</p>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 item-tramite" data-categoria="obras">
+                    <a href="https://molina.domdigital.cl/Account/Login" target="_blank" rel="noopener"
+                        class="card tarjeta-tramite h-100 border-0 shadow-sm rounded-4 p-4 text-center text-decoration-none">
+                        <div class="icono-tramite bg-info text-white mx-auto mb-3 shadow-sm">
+                            <i class="fas fa-trowel-bricks fa-lg"></i>
+                        </div>
+                        <h4 class="h6 fw-bold text-dark mb-1">Trámites Obras (DOM)</h4>
+                        <p class="text-muted fs-8 mb-0">Certificados de edificación.</p>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 item-tramite" data-categoria="pagos">
+                    <a href="https://ww16.e-com.cl/Pagos/PagosVariosv3/?id=120" target="_blank" rel="noopener"
+                        class="card tarjeta-tramite h-100 border-0 shadow-sm rounded-4 p-4 text-center text-decoration-none">
+                        <div class="icono-tramite bg-secondary text-white mx-auto mb-3 shadow-sm">
+                            <i class="fas fa-handshake-angle fa-lg"></i>
+                        </div>
+                        <h4 class="h6 fw-bold text-dark mb-1">Pago de Convenios</h4>
+                        <p class="text-muted fs-8 mb-0">Cuotas y derechos varios.</p>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 item-tramite" data-categoria="obras">
+                    <a href="#transparencia"
+                        class="card tarjeta-tramite h-100 border-0 shadow-sm rounded-4 p-4 text-center text-decoration-none">
+                        <div class="icono-tramite bg-dark text-white mx-auto mb-3 shadow-sm">
+                            <i class="fas fa-users-viewfinder fa-lg"></i>
+                        </div>
+                        <h4 class="h6 fw-bold text-dark mb-1">Concursos Públicos</h4>
+                        <p class="text-muted fs-8 mb-0">Postulaciones a cargos.</p>
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 item-tramite" data-categoria="comunidad">
+                    <a href="#formulario-contacto"
+                        class="card tarjeta-tramite h-100 border-0 shadow-sm rounded-4 p-4 text-center text-decoration-none">
+                        <div class="icono-tramite bg-primary text-white mx-auto mb-3 shadow-sm">
+                            <i class="fas fa-calendar-alt fa-lg"></i>
+                        </div>
+                        <h4 class="h6 fw-bold text-dark mb-1">Operativos Veterinarios</h4>
+                        <p class="text-muted fs-8 mb-0">Calendario de vacunación.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="transparencia" class="py-5 bg-oscuro text-white">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <span class="badge bg-warning text-dark fw-bold mb-3 px-3 py-2 text-uppercase fs-7">
+                        Ley N° 20.285 de Transparencia
+                    </span>
+                    <h2 class="display-6 fw-bold mb-3">Portal de Transparencia Municipal</h2>
+                    <p class="text-white-50 mb-4">Garantizamos el acceso público a la información de la gestión
+                        municipal de Molina, contrataciones, decretos y actas del Concejo Municipal.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="https://www.portaltransparencia.cl" target="_blank" rel="noopener"
+                            class="btn btn-warning text-dark fw-bold rounded-pill px-4 shadow">
+                            <i class="fas fa-external-link-alt me-2"></i>Ir a Transparencia Activa
+                        </a>
+                        <a href="#formulario-contacto" class="btn btn-outline-light rounded-pill px-4">
+                            <i class="fas fa-file-invoice me-2"></i>Solicitar Información
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6" id="alcaldia">
+                    <div class="card border-0 rounded-4 overflow-hidden text-dark bg-white shadow">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top" alt="Edificio Municipalidad de Molina"
+                                style="height: 160px; object-fit: cover;">
+                            <div class="position-absolute bottom-0 start-0 p-3 bg-dark bg-opacity-75 text-white w-100">
+                                <h3 class="h5 fw-bold mb-0"><i class="fas fa-building text-warning me-2"></i>Ilustre
+                                    Municipalidad de Molina</h3>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <p class="fs-7 text-muted mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i>Plaza
+                                de Armas s/n, Molina, Región del Maule</p>
+                            <p class="fs-7 text-muted mb-3"><i class="fas fa-phone text-primary me-2"></i>Mesa Central
+                                Telefónica: <strong>(75) 256 5600</strong></p>
+                            <div
+                                class="p-3 bg-danger text-white rounded-3 fw-bold d-flex justify-content-between align-items-center mb-3 shadow-sm">
+                                <span><i class="fas fa-phone-alt me-2"></i>Emergencias Comunal:</span>
+                                <span class="fs-4">1462</span>
+                            </div>
+                            <a href="#formulario-contacto"
+                                class="btn btn-primary rounded-pill w-100 fw-bold shadow-sm">Enviar Mensaje a la
+                                Alcaldía</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formulario-contacto" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-4">
+                <div class="col-lg-8">
+                    <span class="badge bg-primary px-3 py-2 text-uppercase mb-2">Formulario Requerido</span>
+                    <h2 class="fw-bold text-dark">Formulario de Atención al Vecino</h2>
+                    <div class="separador bg-primary mx-auto"></div>
+                    <p class="text-muted">Envía tus consultas o solicitudes. Todos los campos son validados e informados
+                        en la consola.</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
+
+                        <div id="cajaAlerta" class="alert alert-dismissible fade d-none mb-4" role="alert">
+                            <span id="mensajeAlerta"></span>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Cerrar"></button>
+                        </div>
+
+                        <form id="formVecinal" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="campoNombre" class="form-label fw-semibold fs-7">Nombre Completo <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="campoNombre"
+                                        placeholder="Ej: Juan Pérez Morales" required minlength="3">
+                                    <div class="invalid-feedback">Ingresa un nombre válido (solo letras y mínimo 3
+                                        caracteres).</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="campoRut" class="form-label fw-semibold fs-7">RUT <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="campoRut" placeholder="Ej: 12.345.678-9"
+                                        required>
+                                    <div class="invalid-feedback">Ingresa un RUT chileno válido (ej: 12345678-9).</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="campoEmail" class="form-label fw-semibold fs-7">Correo Electrónico <span
+                                            class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="campoEmail"
+                                        placeholder="ejemplo@correo.cl" required>
+                                    <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="campoTelefono" class="form-label fw-semibold fs-7">Teléfono de Contacto
+                                        <span class="text-danger">*</span></label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text bg-light fw-bold text-secondary">+56</span>
+                                        <input type="tel" class="form-control" id="campoTelefono"
+                                            placeholder="9 1234 5678" value="" autocomplete="off" maxlength="11"
+                                            required>
+                                        <div class="invalid-feedback">Ingresa un número de 9 dígitos (ej: 9 1234 5678).
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="campoSector" class="form-label fw-semibold fs-7">Sector de Molina <span
+                                            class="text-danger">*</span></label>
+                                    <select class="form-select" id="campoSector" required>
+                                        <option value="" selected disabled>Selecciona tu sector...</option>
+                                        <option value="Molina Centro">Molina Centro</option>
+                                        <option value="Lontué">Lontué</option>
+                                        <option value="Casa Blanca">Casa Blanca</option>
+                                        <option value="Entre Ríos">Entre Ríos</option>
+                                        <option value="Pichingal">Pichingal</option>
+                                        <option value="Radal Siete Tazas">Radal Siete Tazas</option>
+                                        <option value="Otro Sector">Otro Sector</option>
+                                    </select>
+                                    <div class="invalid-feedback">Selecciona tu sector.</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="campoTipo" class="form-label fw-semibold fs-7">Tipo de Solicitud <span
+                                            class="text-danger">*</span></label>
+                                    <select class="form-select" id="campoTipo" required>
+                                        <option value="" selected disabled>Selecciona la categoría...</option>
+                                        <option value="Consulta DIDECO / Social">Consulta DIDECO / Ayuda Social</option>
+                                        <option value="Aseo y Ornato">Aseo y Ornato / Basura</option>
+                                        <option value="Alumbrado Público">Alumbrado Público</option>
+                                        <option value="Seguridad Ciudadana">Seguridad Ciudadana</option>
+                                        <option value="Tránsito y Licencias">Tránsito y Licencias</option>
+                                        <option value="Mascotas / Veterinaria">Operativo Veterinario / Mascotas</option>
+                                    </select>
+                                    <div class="invalid-feedback">Selecciona el tipo de solicitud.</div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="campoMensaje" class="form-label fw-semibold fs-7">Detalle del Mensaje
+                                        <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="campoMensaje" rows="4"
+                                        placeholder="Escribe aquí tu consulta o requerimiento..." required
+                                        minlength="10"></textarea>
+                                    <div class="invalid-feedback">Por favor escribe un mensaje (mínimo 10 caracteres).
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="campoTerminos" required>
+                                        <label class="form-check-label fs-8 text-muted" for="campoTerminos">
+                                            Declaro que la información entregada es correcta y autorizo la gestión
+                                            municipal.
+                                        </label>
+                                        <div class="invalid-feedback">Debes aceptar la casilla para continuar.</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 text-end mt-4">
+                                    <button type="button" class="btn btn-outline-secondary rounded-pill me-2 px-4"
+                                        id="btnResetear">Limpiar Formulario</button>
+                                    <button type="submit"
+                                        class="btn btn-primary rounded-pill px-4 fw-bold shadow-sm">Enviar Solicitud
+                                        Vecinal</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-4 align-items-center">
+                <div class="col-lg-4">
+                    <h4 class="h5 fw-bold text-white mb-3"><i class="fas fa-landmark text-primary me-2"></i>Ilustre
+                        Municipalidad de Molina</h4>
+                    <p class="text-white-50 fs-7 mb-3">Trabajando por el desarrollo, la transparencia y el bienestar de
+                        las familias de Molina, Lontué y sus alrededores.</p>
+                    <div class="d-flex gap-3 social-iconos">
+                        <a href="https://facebook.com" target="_blank" rel="noopener"
+                            class="text-white bg-primary p-2 rounded-circle" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener"
+                            class="text-white bg-danger p-2 rounded-circle" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener"
+                            class="text-white bg-dark p-2 border border-secondary rounded-circle"
+                            aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <h5 class="h6 text-warning text-uppercase fw-bold mb-3">Contacto Institucional</h5>
+                    <p class="text-white-50 fs-7 mb-1"><i class="fas fa-clock text-warning me-2"></i> Lunes a Viernes:
+                        08:30 - 14:00 hrs</p>
+                    <p class="text-white-50 fs-7 mb-1"><i class="fas fa-map-marker-alt text-warning me-2"></i> Yerbas
+                        Buenas #1390, Molina</p>
+                    <p class="text-white-50 fs-7"><i class="fas fa-phone text-warning me-2"></i> Mesa Central: (75) 256
+                        5600</p>
+                </div>
+
+                <div class="col-sm-6 col-lg-2">
+                    <h5 class="h6 text-warning text-uppercase fw-bold mb-3">Transparencia</h5>
+                    <p class="text-white-50 fs-7 mb-3">Acceso garantizado según Ley N° 20.285.</p>
+                    <a href="https://www.portaltransparencia.cl" target="_blank" rel="noopener"
+                        class="btn btn-outline-warning btn-sm rounded-pill fw-bold fs-8">Ver Transparencia</a>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="card border-0 rounded-4 text-center p-3 text-white shadow-sm"
+                        style="background: linear-gradient(145deg, #2d333c, #1a1e24); border: 1px solid rgba(255,255,255,0.14) !important;">
+                        <img src="media/Alcalde.jpeg" alt="Felipe Méndez Guzmán - Alcalde de Molina"
+                            class="rounded-circle mx-auto mb-2 shadow"
+                            style="width: 95px; height: 95px; object-fit: cover; border: 3px solid #ffffff; box-shadow: 0 6px 16px rgba(0,0,0,0.4) !important;">
+
+                        <h6 class="fw-bold mb-1 text-white fs-6 text-uppercase" style="letter-spacing: 0.5px;">
+                            Felipe Méndez Guzmán
+                        </h6>
+                        <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill mb-1 mx-auto fs-8"
+                            style="width: fit-content;">Alcalde de Molina</span>
+
+                        <p class="fs-8 text-white-50 mb-2">
+                            <i class="fas fa-phone-alt me-1 text-warning"></i> +56 75 276 0700
+                        </p>
+
+                        <div class="rounded-3 px-2 py-1"
+                            style="background-color: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255,255,255,0.08);">
+                            <small class="d-block text-white-50 fs-8 fw-bold text-uppercase"
+                                style="letter-spacing: 0.5px;">SEGURIDAD PÚBLICA</small>
+                            <span class="fw-bold text-warning fs-7">1462 / 133</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary opacity-25">
+            <div class="text-center text-white-50 fs-8">
+                <p class="mb-0">&copy; 2026 Ilustre Municipalidad de Molina | Evaluación 1 - Desarrollo Web</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="chat-widget-wrapper">
+        <button type="button" id="btnToggleChat" class="btn-chat-flotante shadow-lg"
+            aria-label="Abrir Asistente Virtual Moli">
+            <i class="fas fa-comment-dots fa-2x"></i>
+        </button>
+
+        <div id="cajaChatMoli" class="caja-chat-container shadow-lg d-none">
+            <div class="chat-header d-flex justify-content-between align-items-center p-3 text-white">
+                <div class="d-flex align-items-center gap-2">
+                    <div class="chat-avatar bg-white text-primary rounded-circle d-flex align-items-center justify-content-center fw-bold fs-5"
+                        style="width:38px; height:38px;">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div>
+                        <h5 class="h6 fw-bold mb-0">Asistente Moli</h5>
+                        <small class="fs-8 text-white-50"><i class="fas fa-circle text-success me-1 fs-8"></i> En
+                            línea</small>
+                    </div>
+                </div>
+                <button type="button" id="btnCerrarChat" class="btn-close btn-close-white"
+                    aria-label="Cerrar chat"></button>
+            </div>
+
+            <div class="chat-body p-3" id="chatBody">
+                <div class="mensaje-chat moli-mensaje p-3 rounded-4 bg-light shadow-sm mb-3">
+                    <p class="mb-0 fs-7">¡Hola! Soy el <strong>Asistente Virtual de Molina</strong>. ¿En qué puedo
+                        ayudarte hoy?</p>
+                </div>
+
+                <div class="chat-opciones d-flex flex-column gap-2 mb-3">
+                    <button type="button" class="btn btn-outline-primary btn-sm rounded-pill text-start chat-opcion-btn"
+                        data-pregunta="Permiso de Circulación">
+                        <i class="fas fa-car me-1"></i> Permiso de Circulación
+                    </button>
+                    <button type="button" class="btn btn-outline-primary btn-sm rounded-pill text-start chat-opcion-btn"
+                        data-pregunta="Beneficios DIDECO">
+                        <i class="fas fa-hand-holding-heart me-1"></i> Beneficios y Ayuda Social
+                    </button>
+                    <button type="button" class="btn btn-outline-primary btn-sm rounded-pill text-start chat-opcion-btn"
+                        data-pregunta="Horarios de Atención">
+                        <i class="fas fa-clock me-1"></i> Horarios de Atención
+                    </button>
+                </div>
+            </div>
+
+            <div class="chat-footer p-2 border-top bg-white d-flex align-items-center gap-2">
+                <input type="text" id="inputChatMsg"
+                    class="form-control form-control-sm rounded-pill border-0 bg-light px-3"
+                    placeholder="Escribe aquí..." aria-label="Mensaje para Asistente Moli">
+                <button type="button" id="btnEnviarChat"
+                    class="btn btn-primary btn-sm rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 36px; height: 36px;" aria-label="Enviar mensaje">
+                    <i class="fas fa-paper-plane fs-7"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalBeneficios" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title fw-bold"><i class="fas fa-gift me-2"></i>Guía de Beneficios Sociales</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4 fs-7">
+                    <p class="fw-semibold">Programas de apoyo social disponibles en la Municipalidad de Molina:</p>
+                    <ul class="lh-lg">
+                        <li>Subsidio Único Familiar (SUF)</li>
+                        <li>Subsidio al Agua Potable</li>
+                        <li>Ayudas Sociales de Emergencia (Alimentos y Materiales)</li>
+                        <li>Becas de Educación Superior para estudiantes destacados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalServicios" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header bg-warning text-dark border-0">
+                    <h5 class="modal-title fw-bold"><i class="fas fa-map-marked-alt me-2"></i>Mapas de Servicios
+                        Municipales</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4 fs-7">
+                    <p class="fw-semibold">Recintos y puntos de atención en la comuna:</p>
+                    <ul class="lh-lg">
+                        <li>CESFAM Molina y CESFAM Lontué</li>
+                        <li>Punto Limpio Municipal</li>
+                        <li>Gimnasio y Estadio Municipal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDeportes" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header bg-success text-white border-0">
+                    <h5 class="modal-title fw-bold"><i class="fas fa-running me-2"></i>Talleres Deportivos</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4 fs-7">
+                    <p class="fw-semibold">Actividades deportivas gratuitas organizadas por la Municipalidad:</p>
+                    <ul class="lh-lg">
+                        <li>Escuela de Fútbol Infantil (Martes y Jueves 17:00 hrs)</li>
+                        <li>Zumba Vecinal (Lunes y Miércoles 19:30 hrs)</li>
+                        <li>Acondicionamiento Físico para Adulto Mayor</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
